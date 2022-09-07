@@ -22,7 +22,7 @@ class Interface {
             {
                 title: "Harry Potter and the Chamber of Secrets",
                 author: "J.K. Rowling",
-                pages: "371"
+                pages: "37123"
             }
         ];
         
@@ -35,18 +35,20 @@ class Interface {
     static addToBookList(book) {
         const list = document.querySelector("#book-list");
 
-        const row = document.createElement('tr');
+        const card = document.createElement('div');
 
-        row.innerHTML = `
-        <td>${book.title}</td>
-        <td>${book.author}</td>
-        <td>${book.pages}</td>
-        <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+        card.innerHTML = `
+        <div id ="single-book">
+        <h4>Book Title: ${book.title}
+        <h4> Author: ${book.author}
+        <h4> # of Pages: ${book.pages}
+        </div>
         `;
 
-        list.appendChild(row);
+        list.appendChild(card);
     }
 
+    // delete book
     static deleteBook(el){
         if(el.classList.contains('delete')) {
             el.parentElement.parentElement.remove();
