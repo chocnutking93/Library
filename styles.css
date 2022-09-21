@@ -23,7 +23,7 @@
     border:1px solid black;
 }
 
-#single-book{
+.single-book{
     border:1px solid black;
     border-radius:20px;
     align-items:center;
@@ -32,7 +32,13 @@
     flex-direction: column;
     margin-bottom:20px;
     margin-top:20px;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
+
+}
+
+#book-list{
+
+
 }
 
 #single-book:hover{

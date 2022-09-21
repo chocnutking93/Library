@@ -38,7 +38,7 @@ class Interface {
         const card = document.createElement('div');
 
         card.innerHTML = `
-        <div id ="single-book">
+        <div class ="single-book">
         <h4>Book Title: ${book.title}
         <h4> Author: ${book.author}
         <h4> # of Pages: ${book.pages}
@@ -64,7 +64,6 @@ class Interface {
         container.insertBefore(div, form)
 
         setTimeout(()=> document.querySelector('.alert').remove(),3000);
-
     }
 
     static clearFields () {
